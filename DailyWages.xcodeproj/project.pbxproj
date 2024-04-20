@@ -13,6 +13,21 @@
 		0C33EA3D2BD184550034D484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C33EA3B2BD184550034D484 /* Main.storyboard */; };
 		0C33EA3F2BD184570034D484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C33EA3E2BD184570034D484 /* Assets.xcassets */; };
 		0C33EA422BD184570034D484 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C33EA402BD184570034D484 /* LaunchScreen.storyboard */; };
+		0C33EA502BD1876F0034D484 /* JobListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C33EA4F2BD1876F0034D484 /* JobListingViewController.swift */; };
+		0C33EA542BD188360034D484 /* JobListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C33EA532BD188360034D484 /* JobListingView.swift */; };
+		0C33EA562BD197E00034D484 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C33EA552BD197E00034D484 /* Images.xcassets */; };
+		0C449FE92BD2A90000338F47 /* JobDomainConnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C449FE82BD2A90000338F47 /* JobDomainConnectingView.swift */; };
+		0C449FEB2BD2B32700338F47 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C449FEA2BD2B32700338F47 /* NavigationProtocol.swift */; };
+		0C449FED2BD2BAB700338F47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C449FEC2BD2BAB700338F47 /* BaseViewController.swift */; };
+		0C449FEF2BD2D94800338F47 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C449FEE2BD2D94800338F47 /* BaseService.swift */; };
+		0C449FF12BD3847900338F47 /* JobListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C449FF02BD3847900338F47 /* JobListService.swift */; };
+		0C449FF32BD384F000338F47 /* JobListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C449FF22BD384F000338F47 /* JobListDataModel.swift */; };
+		0C449FF52BD3942300338F47 /* JobListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C449FF42BD3942300338F47 /* JobListRepository.swift */; };
+		0C449FF72BD3B98E00338F47 /* JobListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C449FF62BD3B98E00338F47 /* JobListingViewModel.swift */; };
+		0C6836312BD21EA1006CDF8D /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6836302BD21EA1006CDF8D /* UIColor+extension.swift */; };
+		0C6836332BD21FD6006CDF8D /* JobListingDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6836322BD21FD6006CDF8D /* JobListingDomainModel.swift */; };
+		0CD19C742BD29F52002DC065 /* JobDomainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD19C732BD29F52002DC065 /* JobDomainViewController.swift */; };
+		0CD19C762BD29F8D002DC065 /* JobDomainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD19C752BD29F8D002DC065 /* JobDomainView.swift */; };
 		33A151E0AEAEC16AB67F7D2A /* Pods_DailyWages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F29F21BF07FEC3CA879DB390 /* Pods_DailyWages.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +40,21 @@
 		0C33EA3E2BD184570034D484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C33EA412BD184570034D484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C33EA432BD184570034D484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C33EA4F2BD1876F0034D484 /* JobListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListingViewController.swift; sourceTree = "<group>"; };
+		0C33EA532BD188360034D484 /* JobListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListingView.swift; sourceTree = "<group>"; };
+		0C33EA552BD197E00034D484 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0C449FE82BD2A90000338F47 /* JobDomainConnectingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDomainConnectingView.swift; sourceTree = "<group>"; };
+		0C449FEA2BD2B32700338F47 /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
+		0C449FEC2BD2BAB700338F47 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0C449FEE2BD2D94800338F47 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		0C449FF02BD3847900338F47 /* JobListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListService.swift; sourceTree = "<group>"; };
+		0C449FF22BD384F000338F47 /* JobListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListDataModel.swift; sourceTree = "<group>"; };
+		0C449FF42BD3942300338F47 /* JobListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListRepository.swift; sourceTree = "<group>"; };
+		0C449FF62BD3B98E00338F47 /* JobListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListingViewModel.swift; sourceTree = "<group>"; };
+		0C6836302BD21EA1006CDF8D /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		0C6836322BD21FD6006CDF8D /* JobListingDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListingDomainModel.swift; sourceTree = "<group>"; };
+		0CD19C732BD29F52002DC065 /* JobDomainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDomainViewController.swift; sourceTree = "<group>"; };
+		0CD19C752BD29F8D002DC065 /* JobDomainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDomainView.swift; sourceTree = "<group>"; };
 		63E452B6DFA47464733A972A /* Pods-DailyWages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyWages.release.xcconfig"; path = "Target Support Files/Pods-DailyWages/Pods-DailyWages.release.xcconfig"; sourceTree = "<group>"; };
 		655726A53FC5BE8A84D97797 /* Pods-DailyWages.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyWages.debug.xcconfig"; path = "Target Support Files/Pods-DailyWages/Pods-DailyWages.debug.xcconfig"; sourceTree = "<group>"; };
 		F29F21BF07FEC3CA879DB390 /* Pods_DailyWages.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyWages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +93,16 @@
 		0C33EA342BD184550034D484 /* DailyWages */ = {
 			isa = PBXGroup;
 			children = (
+				0C33EA4E2BD187240034D484 /* Common */,
+				0C33EA4D2BD187190034D484 /* Services */,
+				0C33EA4C2BD186EC0034D484 /* DataModels */,
+				0C33EA4B2BD186DE0034D484 /* Repositories */,
+				0C33EA4A2BD186CC0034D484 /* DomainModels */,
+				0C33EA522BD187F30034D484 /* ConnectingViews */,
+				0C33EA512BD187E30034D484 /* SwiftUIViews */,
+				0C33EA492BD186AF0034D484 /* ModelsAndControllers */,
 				0C33EA352BD184550034D484 /* AppDelegate.swift */,
+				0C33EA552BD197E00034D484 /* Images.xcassets */,
 				0C33EA372BD184550034D484 /* SceneDelegate.swift */,
 				0C33EA392BD184550034D484 /* ViewController.swift */,
 				0C33EA3B2BD184550034D484 /* Main.storyboard */,
@@ -72,6 +111,84 @@
 				0C33EA432BD184570034D484 /* Info.plist */,
 			);
 			path = DailyWages;
+			sourceTree = "<group>";
+		};
+		0C33EA492BD186AF0034D484 /* ModelsAndControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C449FF82BD3B99400338F47 /* JobListing */,
+				0CD19C732BD29F52002DC065 /* JobDomainViewController.swift */,
+			);
+			path = ModelsAndControllers;
+			sourceTree = "<group>";
+		};
+		0C33EA4A2BD186CC0034D484 /* DomainModels */ = {
+			isa = PBXGroup;
+			children = (
+				0C6836322BD21FD6006CDF8D /* JobListingDomainModel.swift */,
+			);
+			path = DomainModels;
+			sourceTree = "<group>";
+		};
+		0C33EA4B2BD186DE0034D484 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0C449FF42BD3942300338F47 /* JobListRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0C33EA4C2BD186EC0034D484 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				0C449FF22BD384F000338F47 /* JobListDataModel.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		0C33EA4D2BD187190034D484 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0C449FF02BD3847900338F47 /* JobListService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0C33EA4E2BD187240034D484 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C6836302BD21EA1006CDF8D /* UIColor+extension.swift */,
+				0C449FEA2BD2B32700338F47 /* NavigationProtocol.swift */,
+				0C449FEC2BD2BAB700338F47 /* BaseViewController.swift */,
+				0C449FEE2BD2D94800338F47 /* BaseService.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0C33EA512BD187E30034D484 /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				0C33EA532BD188360034D484 /* JobListingView.swift */,
+				0CD19C752BD29F8D002DC065 /* JobDomainView.swift */,
+			);
+			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
+		0C33EA522BD187F30034D484 /* ConnectingViews */ = {
+			isa = PBXGroup;
+			children = (
+				0C449FE82BD2A90000338F47 /* JobDomainConnectingView.swift */,
+			);
+			path = ConnectingViews;
+			sourceTree = "<group>";
+		};
+		0C449FF82BD3B99400338F47 /* JobListing */ = {
+			isa = PBXGroup;
+			children = (
+				0C449FF62BD3B98E00338F47 /* JobListingViewModel.swift */,
+				0C33EA4F2BD1876F0034D484 /* JobListingViewController.swift */,
+			);
+			path = JobListing;
 			sourceTree = "<group>";
 		};
 		4ED368D7CADE4A1068F2486E /* Frameworks */ = {
@@ -88,7 +205,6 @@
 				655726A53FC5BE8A84D97797 /* Pods-DailyWages.debug.xcconfig */,
 				63E452B6DFA47464733A972A /* Pods-DailyWages.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C33EA422BD184570034D484 /* LaunchScreen.storyboard in Resources */,
+				0C33EA562BD197E00034D484 /* Images.xcassets in Resources */,
 				0C33EA3F2BD184570034D484 /* Assets.xcassets in Resources */,
 				0C33EA3D2BD184550034D484 /* Main.storyboard in Resources */,
 			);
@@ -190,8 +307,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C33EA3A2BD184550034D484 /* ViewController.swift in Sources */,
+				0C449FF32BD384F000338F47 /* JobListDataModel.swift in Sources */,
+				0C33EA542BD188360034D484 /* JobListingView.swift in Sources */,
+				0CD19C742BD29F52002DC065 /* JobDomainViewController.swift in Sources */,
+				0C33EA502BD1876F0034D484 /* JobListingViewController.swift in Sources */,
+				0C449FEB2BD2B32700338F47 /* NavigationProtocol.swift in Sources */,
+				0C449FED2BD2BAB700338F47 /* BaseViewController.swift in Sources */,
+				0C6836312BD21EA1006CDF8D /* UIColor+extension.swift in Sources */,
+				0C449FEF2BD2D94800338F47 /* BaseService.swift in Sources */,
+				0C449FF52BD3942300338F47 /* JobListRepository.swift in Sources */,
 				0C33EA362BD184550034D484 /* AppDelegate.swift in Sources */,
+				0C6836332BD21FD6006CDF8D /* JobListingDomainModel.swift in Sources */,
+				0C449FF72BD3B98E00338F47 /* JobListingViewModel.swift in Sources */,
 				0C33EA382BD184550034D484 /* SceneDelegate.swift in Sources */,
+				0C449FE92BD2A90000338F47 /* JobDomainConnectingView.swift in Sources */,
+				0CD19C762BD29F8D002DC065 /* JobDomainView.swift in Sources */,
+				0C449FF12BD3847900338F47 /* JobListService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
