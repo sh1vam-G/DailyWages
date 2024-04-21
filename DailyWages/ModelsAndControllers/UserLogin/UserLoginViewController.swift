@@ -8,10 +8,12 @@
 import UIKit
 import SwiftUI
 
-class UserLoginViewController: UIViewController {
+class UserLoginViewController: BaseViewController {
 
+    var loginViewModel: UserLoginViewModel = UserLoginViewModel()
+    
     private lazy var userLoginView: UIView = {
-        let controller = UIHostingController(rootView: UserLoginView(delegate: self))
+        let controller = UIHostingController(rootView: UserLoginView(delegate: self, errorMsg: loginViewModel.errorMsg))
         let view = controller.view ?? UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -25,6 +27,37 @@ class UserLoginViewController: UIViewController {
             configureView()
         }
         
+    }
+    
+    func fetchUserDetails(
+        username: String,
+        password: String
+    ) {
+        loginViewModel.fetchUserDetails(
+            username: username,
+            password: password
+        ) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let isValid):
+                if isValid {
+                    self.navigateToUserProfileVC()
+                } else {
+                    break
+                }
+            case .failure(let error):
+                switch error {
+                case .networkError:
+                    loginViewModel.updateViewWithMsg(msg: "network error try again later")
+                case .serverError:
+                    loginViewModel.updateViewWithMsg(msg: "server error try again later")
+                case .incorrectRequest:
+                    loginViewModel.updateViewWithMsg(msg: "incorrect username or password")
+                case .unknownStatus:
+                    loginViewModel.updateViewWithMsg(msg: "some error fetching the details")
+                }
+            }
+        }
     }
     
     func configureView() {
@@ -51,9 +84,20 @@ class UserLoginViewController: UIViewController {
         viewControllers.append(UserProfileViewController())
         self.navigationController?.setViewControllers(viewControllers, animated: false)
     }
+    
+    func navigateToUserRegistrationVC() {
+        var viewControllers = navigationController?.viewControllers ?? []
+        viewControllers.removeLast()
+        viewControllers.append(UserRegistrationController())
+        self.navigationController?.setViewControllers(viewControllers, animated: false)
+    }
 }
 
 extension UserLoginViewController: LoginButtonDelegate {
+    func registerButtonTapped() {
+        self.navigateToUserRegistrationVC()
+    }
+    
     func loginButtonTapped(username: String, password: String) {
         self.navigateToUserProfileVC()
     }

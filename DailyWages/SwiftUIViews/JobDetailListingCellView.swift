@@ -22,6 +22,7 @@ struct JobDetailListingCellView: View {
                     .padding(.horizontal, 30)
                     .padding(.top, 20)
             }
+            
             HStack {
                 Text("number of pieces: ")
                     .padding(15)
@@ -31,6 +32,15 @@ struct JobDetailListingCellView: View {
                     .font(Font.custom("", size: 20))
                     .padding(.horizontal, 30)
             }.padding(.top, -12)
+            HStack {
+                Text("status: ")
+                    .padding(15)
+                    .padding(.horizontal, 15)
+                Spacer()
+                Text(String(job.status ?? "Unknown"))
+                    .font(Font.custom("", size: 20))
+                    .padding(.horizontal, 30)
+            }.padding(.top, -22)
             HStack {
                 Text("total amount:")
                     .padding(.horizontal, 30)
