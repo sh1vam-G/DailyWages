@@ -15,8 +15,6 @@ class ViewController: BaseViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.systemTeal
         
-//        self.navigationController?.pushViewController(viewController, animated: false)
-//        print("came to view controller")
         self.navigationController?.setViewControllers([viewController], animated: true)
     }
 }

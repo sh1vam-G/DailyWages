@@ -13,7 +13,13 @@ protocol JobListingProtocol {
     func getJobsImage() -> Image
 }
 
-class JobListDomainModel {
+enum JobStatusType: String {
+    case unassigned = "UNASSIGNED"
+    case done = "DONE"
+    case progress = "PROGRESS"
+    
+}
+struct JobListDomainModel: Hashable {
     var id: String?
     var code: String?
     var type: String?

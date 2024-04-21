@@ -26,6 +26,11 @@ class JobDomainViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNavigationBarColor(color: UIColor(hex: "#e4e4e4"))
+    }
+    
     func configureView() {
         configureViewHierarchy()
         configureViewConstraints()

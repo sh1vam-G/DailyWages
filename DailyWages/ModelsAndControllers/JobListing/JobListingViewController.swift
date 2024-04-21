@@ -13,9 +13,10 @@ class JobListingViewController: UIViewController {
     var jobListingViewModel: JobListingViewModel = JobListingViewModel()
     
     private lazy var listingView: UIView = {
-        let controller = UIHostingController(rootView: JobListingView(jobs: self.jobListingViewModel.jobDomainList))
+        let controller = UIHostingController(rootView: JobListingView(jobs: self.jobListingViewModel.jobDomainList, delegate: self))
         let view = controller.view ?? UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = UIColor(hex: "#eeeeee")
         return view
     }()
     
@@ -25,11 +26,17 @@ class JobListingViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViewHierarchy()
+        configureViewConstraints()
+        self.setTitle(title: "OPTIONS FOR YOU")
+        self.setUpDefaultNavigationController()
+        self.setRightBarButtonItemToUserLogin()
     }
     
     
     func configureViewHierarchy() {
         self.view.addSubview(listingView)
+        self.view.backgroundColor = UIColor(hex: "#eeeeee")
     }
     
     func configureViewConstraints() {
@@ -41,4 +48,14 @@ class JobListingViewController: UIViewController {
         ])
     }
     
+    
+}
+
+extension JobListingViewController: JobListingSelectionProtocol {
+    func jobListItemSelectedOf(type: HomeJobTypes) {
+        let viewModel = JobDetailListingViewModel(type: type)
+        let controller = JobDetailListingViewController(viewModel: viewModel)
+        controller.view.backgroundColor = UIColor(hex: "#eeeeee")
+        self.navigationController?.pushViewController(controller, animated: false)
+    }
 }

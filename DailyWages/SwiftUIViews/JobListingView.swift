@@ -7,22 +7,32 @@
 
 import SwiftUI
 
-struct Jobs {
-    let id: UUID
-    let jobs: [HomeJobTypes]
+protocol JobListingSelectionProtocol: AnyObject {
+    func jobListItemSelectedOf(type: HomeJobTypes)
 }
 
 struct JobListingView: View {
-    private var
-    jobs: Jobs = Jobs(id: UUID(), jobs: [.packaging, .stitching, .laundry, .weaver, .stylist, .designer])
+    weak var delegate: JobListingSelectionProtocol?
+    private var jobs: [HomeJobTypes] = []
     
-    init(jobs: Jobs) {
+    init(jobs: [HomeJobTypes], delegate: JobListingSelectionProtocol?) {
         self.jobs = jobs
+        self.delegate = delegate
     }
     var body: some View {
-//        ForEach(jobs.jobs, id: \.id) { job in
-        JobCellView(job: jobs.jobs[0])
-//        }
+        VStack {
+            Spacer()
+                .frame(height: 40)
+            ScrollView {
+                ForEach(jobs, id: \.self) { job in
+                    JobCellView(job: job)
+                        .onTapGesture {
+                            delegate?.jobListItemSelectedOf(type: job)
+                        }
+                }
+            }
+        }
+        .background(Color(uiColor: UIColor(hex: "#eeeeee")))
     }
 }
 
@@ -34,11 +44,11 @@ struct JobCellView: View {
                 .resizable()
                 .renderingMode(.template)
                 .foregroundColor(.cyan)
-                .frame(width: 60, height: 60)
+                .frame(width: 50, height: 50)
                 .cornerRadius(10)
                 .padding(.horizontal, 30)
             job.getJobsText()
-                .font(Font.custom("", size: 25))
+                .font(Font.custom("", size: 20))
             Spacer()
         }
         .listRowInsets(
@@ -49,21 +59,22 @@ struct JobCellView: View {
                 trailing: 8
             )
         )
-        .frame(width: UIScreen.main.bounds.width-40, height: 100)
-        .background(Color(uiColor: UIColor(hex: "#e4e4e4")))
+        .frame(width: UIScreen.main.bounds.width-40, height: 80)
+        .background(Color.white)
         .cornerRadius(10)
         .shadow(color: Color.gray, radius: 2, x: 0, y: 1)
+        .padding(.bottom, 10)
     }
 }
 
-enum HomeJobTypes: JobListingProtocol {
+enum HomeJobTypes: String, JobListingProtocol {
 
-    case packaging
-    case stitching
-    case laundry
-    case weaver
-    case stylist
-    case designer
+    case packaging = "PACKAGING"
+    case stitching = "STITCHING"
+    case laundry = "LAUNDRY"
+    case weaver = "WEAVING"
+    case stylist = "STYLING"
+    case designer = "DESIGNER"
     
     
     func getJobsText() -> Text {
@@ -103,5 +114,5 @@ enum HomeJobTypes: JobListingProtocol {
 }
 
 #Preview {
-    JobListingView(jobs: Jobs(id: UUID(), jobs: []))
+    JobListingView(jobs: [.packaging, .stitching, .laundry, .weaver, .stylist, .designer], delegate: nil)
 }

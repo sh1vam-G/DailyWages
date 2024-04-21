@@ -37,13 +37,15 @@ class BaseService {
             URLQueryItem(name: key,value: value)
         }
         var request = URLRequest(url: url)
-        request.httpMethod = type.rawValue
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: bodyParams, options: [])
-        } catch(let error) {
-            print("error converting to data from json body")
-            print(error)
-            completion(Result.failure(.incorrectRequest))
+        if !bodyParams.isEmpty {
+            request.httpMethod = type.rawValue
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: bodyParams, options: [])
+            } catch(let error) {
+                print("error converting to data from json body")
+                print(error)
+                completion(Result.failure(.incorrectRequest))
+            }
         }
         request.url?.append(queryItems: queryItems)
         headers.forEach{ (key,value) in

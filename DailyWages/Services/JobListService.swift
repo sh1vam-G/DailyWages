@@ -19,7 +19,7 @@ class JobListService: BaseService {
     func fetchJobLists(
         completion: @escaping JobListApiResponse
     ) {
-        let jobListUrl = "localhost:3000/jobs"
+        let jobListUrl = "http://localhost:3000/jobs"
         
         executeRequest(
             urlString: jobListUrl,
