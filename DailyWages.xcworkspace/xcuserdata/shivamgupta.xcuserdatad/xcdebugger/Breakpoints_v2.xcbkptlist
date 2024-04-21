@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F3D92B5A-9EE4-4B88-8278-EBFA4E2D6DE8"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0743E7B-9625-4698-85C0-8DE8C5A7DF9C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetchJobs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D960824-2808-47B7-A4B9-D50DD7254E12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "prepareJobsList(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D960824-2808-47B7-A4B9-D50DD7254E12 - 164b1b9d9a0cf738"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.JobDetailListingViewModel.prepareJobsList(completion: (Swift.Result&lt;Swift.Bool, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "3D960824-2808-47B7-A4B9-D50DD7254E12 - e8d11058df670e59"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DailyWages.SuccessResponseType&lt;Swift.Array&lt;DailyWages.JobListDomainModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; () in DailyWages.JobDetailListingViewModel.prepareJobsList(completion: (Swift.Result&lt;Swift.Bool, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "3D960824-2808-47B7-A4B9-D50DD7254E12 - 164b1b9d9a0cf7df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.JobDetailListingViewModel.prepareJobsList(completion: (Swift.Result&lt;Swift.Bool, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "3D960824-2808-47B7-A4B9-D50DD7254E12 - e8d11058df670d32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DailyWages.SuccessResponseType&lt;Swift.Array&lt;DailyWages.JobListDomainModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; () in DailyWages.JobDetailListingViewModel.prepareJobsList(completion: (Swift.Result&lt;Swift.Bool, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "580ADFCA-BDB6-43D6-B715-56B4BBDE35E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Repositories/JobListRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "fetchJobLists(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "580ADFCA-BDB6-43D6-B715-56B4BBDE35E7 - f79e861188d00f6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.JobListRepository.fetchJobLists(completion: (Swift.Result&lt;DailyWages.SuccessResponseType&lt;Swift.Array&lt;DailyWages.JobListDomainModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Repositories/JobListRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "580ADFCA-BDB6-43D6-B715-56B4BBDE35E7 - 76fe0e68a3796122"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DailyWages.SuccessResponseType&lt;Swift.Array&lt;DailyWages.JobListDataModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; () in DailyWages.JobListRepository.fetchJobLists(completion: (Swift.Result&lt;DailyWages.SuccessResponseType&lt;Swift.Array&lt;DailyWages.JobListDomainModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Repositories/JobListRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81E6F678-CF7A-46AC-8F8D-1B329AB5CBB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Services/JobListService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchJobLists(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "81E6F678-CF7A-46AC-8F8D-1B329AB5CBB9 - 7c75c4bf5e8ed5fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.Array&lt;DailyWages.JobListDataModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; () in DailyWages.JobListService.fetchJobLists(completion: (Swift.Result&lt;DailyWages.SuccessResponseType&lt;Swift.Array&lt;DailyWages.JobListDataModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Services/JobListService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "81E6F678-CF7A-46AC-8F8D-1B329AB5CBB9 - 7c75c4bf5e8ed5fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Optional&lt;Swift.Array&lt;DailyWages.JobListDataModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; () in DailyWages.JobListService.fetchJobLists(completion: (Swift.Result&lt;DailyWages.SuccessResponseType&lt;Swift.Array&lt;DailyWages.JobListDataModel&gt;&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Services/JobListService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9FA449D-C4D8-4AB4-9407-7B4CE0BDA53C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Services/JobListService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "fetchJobLists(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09A25791-D811-4AC0-8DC3-E5453A354903"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Common/BaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "executeRequest(urlString:queryParams:bodyParams:headers:type:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "09A25791-D811-4AC0-8DC3-E5453A354903 - 37e4246f8318b86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "09A25791-D811-4AC0-8DC3-E5453A354903 - 37e4246f8318b86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "616">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "777CD68C-2686-4696-AA8B-A1ACDDC2295C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Common/BaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "executeRequest(urlString:queryParams:bodyParams:headers:type:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "777CD68C-2686-4696-AA8B-A1ACDDC2295C - 37e4246f8318b67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "760">
+               </Location>
+               <Location
+                  uuid = "777CD68C-2686-4696-AA8B-A1ACDDC2295C - bcf3426180fc775e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String, Swift.String) -&gt; Foundation.URLQueryItem in DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "777CD68C-2686-4696-AA8B-A1ACDDC2295C - 37e4246f8318b67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "772">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7317C3FC-4811-4AC7-9B3D-D0A9E86A0AA3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Common/BaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "executeRequest(urlString:queryParams:bodyParams:headers:type:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7317C3FC-4811-4AC7-9B3D-D0A9E86A0AA3 - 37e4246f8318b86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "7317C3FC-4811-4AC7-9B3D-D0A9E86A0AA3 - 37e4246f8318b86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "616">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "772A5C1C-FF43-4AEF-B8B5-B68C23CD3F2F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Common/BaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "executeRequest(urlString:queryParams:bodyParams:headers:type:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "772A5C1C-FF43-4AEF-B8B5-B68C23CD3F2F - 37e4246f8318a7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1252">
+               </Location>
+               <Location
+                  uuid = "772A5C1C-FF43-4AEF-B8B5-B68C23CD3F2F - 37e4246f8318a7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1028">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA46073D-1E1A-40F1-BB28-5C55AE11E758"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Common/BaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "executeRequest(urlString:queryParams:bodyParams:headers:type:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CA46073D-1E1A-40F1-BB28-5C55AE11E758 - a293c0a764494990"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String, Swift.String) -&gt; () in DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "CA46073D-1E1A-40F1-BB28-5C55AE11E758 - 37e4246f8318995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1348">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDC878A9-CEC6-46B1-B4CB-52751375579B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/SwiftUIViews/JobListingView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B944CA27-CE19-4C71-B243-FAE436A6529E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Common/SpinnerView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "stop()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B48F1B2-F0A1-4495-A372-99DC1C9B0078"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Common/SpinnerView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "452F85BE-286E-4EE5-B24D-0AA98E01FC57"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/Common/BaseService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "executeRequest(urlString:queryParams:bodyParams:headers:type:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "452F85BE-286E-4EE5-B24D-0AA98E01FC57 - a902d90d92ce82c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "452F85BE-286E-4EE5-B24D-0AA98E01FC57 - 37e4246f83188ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "1632">
+               </Location>
+               <Location
+                  uuid = "452F85BE-286E-4EE5-B24D-0AA98E01FC57 - a902d90d92ce82e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DailyWages.BaseService.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlString: Swift.String, queryParams: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, bodyParams: Swift.Dictionary&lt;Swift.String, Any&gt;, headers: Swift.Dictionary&lt;Swift.String, Swift.String&gt;, type: DailyWages.RequestMethods, completion: (Swift.Result&lt;Swift.Optional&lt;&#x3c4;_0_0&gt;, DailyWages.ErrorType&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DailyWages"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivamgupta/Desktop/fullStackLearning/DailyWagesApp/DailyWages/Common/BaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "424">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EFDBFEC-8A84-4101-B2F2-1E24ACE84B42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fetchJobs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8F582C2-ACC3-4307-9A41-E52BE0A2F50B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "fetchJobs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13CA9B17-F748-490A-A544-5F5F81F15FFE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyWages/ModelsAndControllers/JobDetailListing/JobDetailListingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "init(viewModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

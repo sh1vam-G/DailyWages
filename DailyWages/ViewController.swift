@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
+    let viewController = JobDomainViewController.makeViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.systemTeal
+        
+        self.navigationController?.setViewControllers([viewController], animated: true)
     }
-
-
 }
 
