@@ -16,6 +16,7 @@ struct ErrorView: View {
                 .resizable()
                 .frame(width: 100, height: 100)
             Text(errorMsg)
+                .foregroundColor(.black)
                 .font(Font.custom("", size: 20))
                 .multilineTextAlignment(.center)
         }

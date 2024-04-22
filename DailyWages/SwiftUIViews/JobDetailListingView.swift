@@ -7,8 +7,20 @@
 
 import SwiftUI
 
+protocol JobDetailListingProtocol: AnyObject {
+    func jobSelected(job: JobListDomainModel)
+}
 struct JobDetailListingView: View {
+    weak var delegate: JobDetailListingProtocol?
     var jobs: [JobListDomainModel] = []
+    
+    init(
+        jobs: [JobListDomainModel],
+        delegate: JobDetailListingProtocol?
+    ) {
+        self.jobs = jobs
+        self.delegate = delegate
+    }
     var body: some View {
         VStack {
             ScrollView {
@@ -17,6 +29,9 @@ struct JobDetailListingView: View {
                         .frame(height: 20)
                     JobDetailListingCellView(job: job)
                         .shadow(color:.gray ,radius: 4,x: 0,y: 4)
+                        .onTapGesture {
+                            delegate?.jobSelected(job: job)
+                        }
                 }
             }
         }
@@ -26,5 +41,5 @@ struct JobDetailListingView: View {
 }
 
 #Preview {
-    JobDetailListingView(jobs: [])
+    JobDetailListingView(jobs: [], delegate: nil)
 }

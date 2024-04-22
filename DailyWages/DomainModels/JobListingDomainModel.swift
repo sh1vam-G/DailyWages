@@ -20,7 +20,7 @@ enum JobStatusType: String {
     
 }
 struct JobListDomainModel: Hashable {
-    var id: String?
+    var id: Int?
     var code: String?
     var type: String?
     var numberOfPieces: Int?
@@ -34,7 +34,7 @@ struct JobListDomainModel: Hashable {
     var difficultyLevel: String?
     
     init(
-        id: String? = "",
+        id: Int? = .zero,
         code: String? = "",
         type: String? = "",
         numberOfPieces: Int? = .zero,

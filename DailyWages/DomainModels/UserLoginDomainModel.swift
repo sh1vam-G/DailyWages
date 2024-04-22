@@ -18,14 +18,14 @@ struct UserLoginDomainModel {
     let jobs: [JobListDomainModel]
     
     init(
-        id: Int,
-        name: String,
-        gender: String,
-        email: String,
-        phoneNumber: String,
-        ratings: Int,
-        address: UserAddressDomainModel,
-        jobs: [JobListDomainModel]
+        id: Int = .zero,
+        name: String = String(),
+        gender: String = String(),
+        email: String = String(),
+        phoneNumber: String = String(),
+        ratings: Int = .zero,
+        address: UserAddressDomainModel = UserAddressDomainModel(),
+        jobs: [JobListDomainModel] = []
     ) {
         self.id = id
         self.name = name
@@ -49,6 +49,17 @@ struct UserLoginDomainModel {
             jobs: JobListDomainModel.prepareModel(using: model.jobs)
         )
     }
+    func getInProgressJobs() -> [JobListDomainModel] {
+        return jobs.filter{ $0.status == "PROGRESS" }
+    }
+    
+    func getUnassignedJobs() -> [JobListDomainModel] {
+        return jobs.filter{ $0.status == "UNASSIGNED" }
+    }
+    
+    func getCompletedJobs() -> [JobListDomainModel] {
+        return jobs.filter{ $0.status == "COMPLETED" }
+    }
 }
 
 struct UserAddressDomainModel {
@@ -62,14 +73,14 @@ struct UserAddressDomainModel {
     let pincode: String
     
     init(
-        id: Int,
-        latitude: Double,
-        longitude: Double,
-        houseNo: String,
-        apartment: String,
-        city: String,
-        state: String,
-        pincode: String
+        id: Int = .zero,
+        latitude: Double = Double(),
+        longitude: Double = Double(),
+        houseNo: String = String(),
+        apartment: String = String(),
+        city: String = String(),
+        state: String = String(),
+        pincode: String = String()
     ) {
         self.id = id
         self.latitude = latitude
@@ -92,5 +103,9 @@ struct UserAddressDomainModel {
             state: model.state,
             pincode: model.pincode
         )
+    }
+    
+    func getUserAddress() -> String {
+        return (self.houseNo + ", " + self.apartment + ", " + self.city + ", " + self.state + ", " + self.pincode)
     }
 }

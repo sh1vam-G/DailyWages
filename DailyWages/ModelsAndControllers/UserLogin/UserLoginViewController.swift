@@ -21,8 +21,10 @@ class UserLoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setTitle(title: "Login Required")
+        self.setUpDefaultNavigationController()
         if let user = UserProfileInformation.getUserDetails() {
-            self.navigateToUserProfileVC()
+            self.fetchUserDetails(username: user.username, password: user.password)
         } else {
             configureView()
         }
@@ -33,17 +35,17 @@ class UserLoginViewController: BaseViewController {
         username: String,
         password: String
     ) {
+        self.addSpinnerView()
         loginViewModel.fetchUserDetails(
             username: username,
             password: password
         ) { [weak self] result in
             guard let self = self else { return }
+            self.removeSpinnerView()
             switch result {
             case .success(let isValid):
                 if isValid {
                     self.navigateToUserProfileVC()
-                } else {
-                    break
                 }
             case .failure(let error):
                 switch error {
@@ -67,6 +69,7 @@ class UserLoginViewController: BaseViewController {
     
     func configureViewHierarchy() {
         self.view.addSubview(userLoginView)
+        self.setUpDefaultNavigationController()
     }
     
     func configureViewConstraints() {
@@ -79,17 +82,24 @@ class UserLoginViewController: BaseViewController {
     }
     
     func navigateToUserProfileVC() {
-        var viewControllers = navigationController?.viewControllers ?? []
-        viewControllers.removeLast()
-        viewControllers.append(UserProfileViewController())
-        self.navigationController?.setViewControllers(viewControllers, animated: false)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let viewModel = UserProfileViewModel(userData: loginViewModel.userData)
+            var viewControllers = navigationController?.viewControllers ?? []
+            viewControllers.removeLast()
+            viewControllers.append(UserProfileViewController(viewModel: viewModel))
+            self.navigationController?.setViewControllers(viewControllers, animated: false)
+        }
     }
     
     func navigateToUserRegistrationVC() {
-        var viewControllers = navigationController?.viewControllers ?? []
-        viewControllers.removeLast()
-        viewControllers.append(UserRegistrationController())
-        self.navigationController?.setViewControllers(viewControllers, animated: false)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            var viewControllers = navigationController?.viewControllers ?? []
+            viewControllers.removeLast()
+            viewControllers.append(UserRegistrationController())
+            self.navigationController?.setViewControllers(viewControllers, animated: false)
+        }
     }
 }
 
@@ -99,6 +109,6 @@ extension UserLoginViewController: LoginButtonDelegate {
     }
     
     func loginButtonTapped(username: String, password: String) {
-        self.navigateToUserProfileVC()
+        self.fetchUserDetails(username: username, password: password)
     }
 }

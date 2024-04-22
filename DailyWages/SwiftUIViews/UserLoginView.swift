@@ -34,27 +34,33 @@ struct UserLoginView: View {
             Spacer()
             VStack {
                 TextField("Username", text: $username)
+                    .foregroundColor(.black)
                     .frame(height: 20)
                     .padding(20)
                     .background(Color.white)
                     .cornerRadius(20)
                     .padding(10)
+                    .autocapitalization(.none)
                 
                 ZStack(alignment: .trailing) {
                     if isPassVisible {
                         TextField("Password", text: $password)
+                            .foregroundColor(.black)
                             .frame(height: 20)
                             .padding(20)
                             .background(Color.white)
                             .cornerRadius(20)
                             .padding(10)
+                            .autocapitalization(.none)
                     } else {
                         SecureField("Password", text: $password)
+                            .foregroundColor(.black)
                             .frame(height: 20)
                             .padding(20)
                             .background(Color.white)
                             .cornerRadius(20)
                             .padding(10)
+                            .autocapitalization(.none)
                     }
                     
                     Button(action: {

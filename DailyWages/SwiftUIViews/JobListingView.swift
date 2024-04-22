@@ -48,6 +48,7 @@ struct JobCellView: View {
                 .cornerRadius(10)
                 .padding(.horizontal, 30)
             job.getJobsText()
+                .foregroundColor(.black)
                 .font(Font.custom("", size: 20))
             Spacer()
         }

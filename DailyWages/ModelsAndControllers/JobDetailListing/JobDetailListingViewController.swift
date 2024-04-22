@@ -16,7 +16,7 @@ class JobDetailListingViewController: BaseViewController {
         var view = UIView()
         
         if jobListingDetailViewModel?.getJobAsPerType() != [] {
-            let controller = UIHostingController(rootView: JobDetailListingView(jobs: jobListingDetailViewModel?.getJobAsPerType() ?? []))
+            let controller = UIHostingController(rootView: JobDetailListingView(jobs: jobListingDetailViewModel?.getJobAsPerType() ?? [], delegate: self))
             view = controller.view ?? UIView()
         } else {
             let controller = UIHostingController(rootView: ErrorView(errorMsg: "NO JOBS AVAILABLE IN THIS CATEGORY"))
@@ -112,5 +112,20 @@ class JobDetailListingViewController: BaseViewController {
             listingView.topAnchor.constraint(equalTo: self.view.topAnchor),
             listingView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
+    }
+    
+    func navigateToJobDescriptionVC(job: JobListDomainModel) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let viewModel = JobDescriptionViewModel(job: job)
+            let controller = JobDescriptionViewController(viewModel: viewModel)
+            self.navigationController?.pushViewController(controller, animated: false)
+        }
+    }
+}
+
+extension JobDetailListingViewController: JobDetailListingProtocol {
+    func jobSelected(job: JobListDomainModel) {
+        self.navigateToJobDescriptionVC(job: job)
     }
 }

@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import Combine
 
 protocol RegisterUsernameDelegate: AnyObject {
     func usernameChanged(text: String)
     func registerButtonTapped(username: String, pass: String)
+}
+
+class ErrorMsg: ObservableObject {
+    @Published var errorMsg: String = String()
 }
 
 struct RegisterUsernameView: View {
@@ -17,13 +22,13 @@ struct RegisterUsernameView: View {
     @State private var username: String = String()
     @State private var password: String = String()
     @State private var isPassVisible: Bool = false
-    @State private var errorMsg: String = String()
+    @ObservedObject var errorMsg: ErrorMsg
     
     weak var delegate: RegisterUsernameDelegate?
     
     init(
         delegate: RegisterUsernameDelegate?,
-        errorMsg: String
+        errorMsg: ErrorMsg
     ) {
         self.delegate = delegate
         self.errorMsg = errorMsg
@@ -39,8 +44,13 @@ struct RegisterUsernameView: View {
                     .background(Color.white)
                     .cornerRadius(20)
                     .padding(10)
-                    .onChange(of: username) {
-                        delegate?.usernameChanged(text: username)
+                    .textInputAutocapitalization(.none)
+                    .onChange(of: username) { newValue in
+                        if(username.count > 3) {
+                            delegate?.usernameChanged(text: username)
+                        } else {
+                            errorMsg.errorMsg = "username should be more than 3 characters"
+                        }
                     }
                 
                 ZStack(alignment: .trailing) {
@@ -51,6 +61,7 @@ struct RegisterUsernameView: View {
                             .background(Color.white)
                             .cornerRadius(20)
                             .padding(10)
+                            .textInputAutocapitalization(.none)
                     } else {
                         SecureField("Password", text: $password)
                             .frame(height: 20)
@@ -58,6 +69,7 @@ struct RegisterUsernameView: View {
                             .background(Color.white)
                             .cornerRadius(20)
                             .padding(10)
+                            .textInputAutocapitalization(.none)
                     }
                     
                     Button(action: {
@@ -69,17 +81,19 @@ struct RegisterUsernameView: View {
                     .padding(.trailing, 20)
                 }
                 
-                Text(errorMsg)
+                Text(errorMsg.errorMsg)
                     .foregroundColor(.red)
                 
                 Button("Register") {
                     delegate?.registerButtonTapped(username: username, pass: password)
                 }
                 .padding(30)
-                .background(Color.teal)
+                .background(errorMsg.errorMsg == String() ? Color.teal : Color(uiColor:UIColor(hex: "#e4e4e4")))
                 .cornerRadius(20)
                 .foregroundColor(.white)
                 .padding(20)
+                .disabled(errorMsg.errorMsg == String())
+                
             }
             .background(Color(uiColor: UIColor(hex: "#eeeeee")))
             .cornerRadius(20)
@@ -90,12 +104,8 @@ struct RegisterUsernameView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.gray.opacity(0.5))
     }
-    
-    func updateErrorMsg(msg: String) {
-        errorMsg = msg
-    }
 }
 
 #Preview {
-    RegisterUsernameView(delegate: nil, errorMsg: "errorMsg")
+    RegisterUsernameView(delegate: nil, errorMsg: ErrorMsg())
 }
