@@ -39,6 +39,7 @@ struct RegisterUsernameView: View {
             Spacer()
             VStack {
                 TextField("Username", text: $username)
+                    .foregroundColor(.black)
                     .frame(height: 20)
                     .padding(20)
                     .background(Color.white)
@@ -92,7 +93,7 @@ struct RegisterUsernameView: View {
                 .cornerRadius(20)
                 .foregroundColor(.white)
                 .padding(20)
-                .disabled(errorMsg.errorMsg == String())
+                .disabled(errorMsg.errorMsg != String())
                 
             }
             .background(Color(uiColor: UIColor(hex: "#eeeeee")))

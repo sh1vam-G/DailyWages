@@ -24,7 +24,7 @@ class RegisterUsernameViewController: UIViewController {
         super.viewDidLoad()
         self.configureView()
         self.setTitle(title: "Register Username")
-//        self.setUpDefaultNavigationController()
+        self.setUpDefaultNavigationController()
     }
     
     convenience init(viewModel: RegisterUsernameViewModel)  {
@@ -94,6 +94,31 @@ class RegisterUsernameViewController: UIViewController {
             self.navigationController?.setViewControllers([JobDomainViewController.makeViewController()], animated: false)
         }
     }
+    
+    
+    func configureErrorView(msg: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let errorMsgView: UIView = {
+                let controller = UIHostingController(rootView: ErrorView(errorMsg: msg))
+                let view = controller.view ?? UIView()
+                view.translatesAutoresizingMaskIntoConstraints = false
+                return view
+            }()
+            
+            self.registerUsernameView.removeFromSuperview()
+            self.view.addSubview(errorMsgView)
+            self.view.backgroundColor = UIColor(hex: "#eeeeee")
+            self.setTitle(title: "OOPS!!!")
+            
+            NSLayoutConstraint.activate([
+                errorMsgView.topAnchor.constraint(equalTo: self.view.topAnchor),
+                errorMsgView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+                errorMsgView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+                errorMsgView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+            ])
+        }
+    }
 }
 
 extension RegisterUsernameViewController: RegisterUsernameDelegate {
@@ -102,6 +127,6 @@ extension RegisterUsernameViewController: RegisterUsernameDelegate {
     }
     
     func registerButtonTapped(username: String, pass: String) {
-        
+        registerUser(userName: username, pass: pass)
     }
 }

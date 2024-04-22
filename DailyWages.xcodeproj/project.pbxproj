@@ -61,6 +61,7 @@
 		0C44A0492BD6165B00338F47 /* UserRegisterationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A0482BD6165B00338F47 /* UserRegisterationService.swift */; };
 		0C44A04B2BD6171700338F47 /* UserRegistrationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A04A2BD6171700338F47 /* UserRegistrationResponseModel.swift */; };
 		0C44A04D2BD6194500338F47 /* UserRegistrationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A04C2BD6194500338F47 /* UserRegistrationRepository.swift */; };
+		0C44A04F2BD6974500338F47 /* UpdateJobResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A04E2BD6974500338F47 /* UpdateJobResponseModel.swift */; };
 		0C6836312BD21EA1006CDF8D /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6836302BD21EA1006CDF8D /* UIColor+extension.swift */; };
 		0C6836332BD21FD6006CDF8D /* JobListingDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6836322BD21FD6006CDF8D /* JobListingDomainModel.swift */; };
 		0CD19C742BD29F52002DC065 /* JobDomainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD19C732BD29F52002DC065 /* JobDomainViewController.swift */; };
@@ -125,6 +126,7 @@
 		0C44A0482BD6165B00338F47 /* UserRegisterationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegisterationService.swift; sourceTree = "<group>"; };
 		0C44A04A2BD6171700338F47 /* UserRegistrationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationResponseModel.swift; sourceTree = "<group>"; };
 		0C44A04C2BD6194500338F47 /* UserRegistrationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationRepository.swift; sourceTree = "<group>"; };
+		0C44A04E2BD6974500338F47 /* UpdateJobResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateJobResponseModel.swift; sourceTree = "<group>"; };
 		0C6836302BD21EA1006CDF8D /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		0C6836322BD21FD6006CDF8D /* JobListingDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListingDomainModel.swift; sourceTree = "<group>"; };
 		0CD19C732BD29F52002DC065 /* JobDomainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDomainViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				0C449FF22BD384F000338F47 /* JobListDataModel.swift */,
 				0C44A01E2BD4E6D500338F47 /* UserLoginResponseModel.swift */,
 				0C44A04A2BD6171700338F47 /* UserRegistrationResponseModel.swift */,
+				0C44A04E2BD6974500338F47 /* UpdateJobResponseModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				0C44A0132BD4DEDD00338F47 /* UserProfileViewController.swift in Sources */,
 				0C449FEF2BD2D94800338F47 /* BaseService.swift in Sources */,
 				0C44A0452BD60EE600338F47 /* UserNameRepository.swift in Sources */,
+				0C44A04F2BD6974500338F47 /* UpdateJobResponseModel.swift in Sources */,
 				0C44A0102BD4D83D00338F47 /* UserLoginView.swift in Sources */,
 				0C44A0192BD4E43500338F47 /* UserLoginViewModel.swift in Sources */,
 				0C449FF52BD3942300338F47 /* JobListRepository.swift in Sources */,

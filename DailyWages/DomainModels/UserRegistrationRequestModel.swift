@@ -62,18 +62,23 @@ class UserRegistrationRequestModel {
         )
     }
     
-    func covertIntoBodyParams() -> [String: String] {
+    func covertIntoBodyParams() -> [String: Any] {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-        var bodyParams: [String: String] = [:]
+        var bodyParams: [String: Any] = [:]
         bodyParams["name"] = self.name
-        bodyParams["gender"] = self.gender
+        if !gender.isEmpty {
+            bodyParams["gender"] = "\(gender[gender.startIndex])"
+        } else {
+            bodyParams["gender"] = ""
+        }
         bodyParams["email"] = self.email
         bodyParams["dateOfBirth"] = dateFormatter.string(from: self.dateOfBirth)
         bodyParams["phoneNumber"] = self.phoneNumber
         bodyParams["ratings"] = String(self.ratings)
         bodyParams["username"] = self.username
         bodyParams["pass"] = self.pass
+        bodyParams["address"] = UserAddressDomainModel.createBodyParams(address: self.address)
         return bodyParams
     }
 }

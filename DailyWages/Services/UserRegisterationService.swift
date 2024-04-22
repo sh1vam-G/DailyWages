@@ -11,7 +11,7 @@ typealias userRegistrationResponse = (Result<SuccessResponseType<UserRegistratio
 class UserRegisterationService: BaseService {
     func registerUser(
         url: String,
-        bodyParams: [String: String],
+        bodyParams: [String: Any],
         headers: [String: String],
         completion: @escaping userRegistrationResponse
     ) {

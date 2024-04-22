@@ -16,11 +16,12 @@ class UserNameService: BaseService {
         bodyParams: [String: Any],
         completion: @escaping userNameResponse
     ) {
+        
         executeRequest(
             urlString: url,
             queryParams: [:],
             bodyParams: bodyParams,
-            headers: [:],
+            headers: ["Content-Type":"application/json"],
             type: .post
         ) { (result: Result<Bool?, ErrorType>) in
             switch result {

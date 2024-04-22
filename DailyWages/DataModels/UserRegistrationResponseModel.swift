@@ -8,19 +8,19 @@
 import Foundation
 
 class UserRegistrationResponseModel: Codable {
-    let id: String
-    let isLogin: Bool
+    let id: Int
+    let login: Bool
     
     init(
-        id: String = String(),
-        isLogin: Bool = false
+        id: Int = .zero,
+        login: Bool = false
     ) {
         self.id = id
-        self.isLogin = isLogin
+        self.login = login
     }
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decode(String.self, forKey: .id)
-        self.isLogin = try container.decode(Bool.self, forKey: .isLogin)
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.login = try container.decode(Bool.self, forKey: .login)
     }
 }

@@ -79,6 +79,20 @@ class JobDescriptionViewController: BaseViewController {
             self.navigationController?.setViewControllers([JobDomainViewController.makeViewController()], animated: false)
         }
     }
+    
+    func navigateToLoginVC() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.navigationController?.pushViewController(UserLoginViewController(), animated: false)
+        }
+    }
+    
+    func navigateBackToProfilePage() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.backButtonTapped()
+        }
+    }
 }
 
 extension JobDescriptionViewController: JobAcceptanceDelegate {
@@ -90,7 +104,9 @@ extension JobDescriptionViewController: JobAcceptanceDelegate {
             guard let self = self else { return }
             switch result {
             case .success(.successWithResponse(let valid)):
-                break
+                if valid {
+                    navigateBackToProfilePage()
+                }
             case .success(.successWithoutResponse):
                 break
             case .failure(let error):
@@ -108,8 +124,11 @@ extension JobDescriptionViewController: JobAcceptanceDelegate {
         }
     }
     
-    
     func jobAccepted(jobId: Int) {
+        guard let username = UserProfileInformation.getUserDetails() else {
+            self.navigateToLoginVC()
+            return
+        }
         viewModel.updateJob(
             status: "PROGRESS",
             jobId: String(jobId)

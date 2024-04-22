@@ -23,10 +23,10 @@ class JobDescriptionViewModel {
         respository.updateJobStatus(
             jobId: jobId,
             status: status
-        ) { (result: Result<SuccessResponseType<String>,ErrorType>) in
+        ) { (result: Result<SuccessResponseType<Bool>,ErrorType>) in
             switch result {
-            case .success(.successWithResponse(_)):
-                completion(.success(.successWithResponse(response: true)))
+            case .success(.successWithResponse(let val)):
+                completion(.success(.successWithResponse(response: val)))
             case .success(.successWithoutResponse):
                 completion(.success(.successWithoutResponse))
             case .failure(let error):

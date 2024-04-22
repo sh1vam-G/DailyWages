@@ -7,25 +7,26 @@
 
 import Foundation
 
-typealias jobUpdateResponse = (Result<SuccessResponseType<String>, ErrorType>) -> ()
+typealias jobUpdateResponse = (Result<SuccessResponseType<Bool>, ErrorType>) -> ()
 
 class JobUpdateService: BaseService {
     func updateJobService(
         url: String,
+        bodyParams: [String: String],
         queryParams: [String: String],
         completion: @escaping jobUpdateResponse
     ) {
         executeRequest(
             urlString: url,
             queryParams: queryParams,
-            bodyParams: [:],
-            headers: [:],
+            bodyParams: bodyParams,
+            headers: ["Content-Type":"application/json"],
             type: .put
-        ){ (result: Result<String?,ErrorType>) in
+        ){ (result: Result<UpdateJobResponseModel?,ErrorType>) in
             switch result {
             case .success(let val):
-                if let val = val, val == "UPDATED SUCCESSFULLY" {
-                    completion(.success(.successWithResponse(response: val)))
+                if let val = val {
+                    completion(.success(.successWithResponse(response: val.status)))
                 } else {
                     completion(.success(.successWithoutResponse))
                 }

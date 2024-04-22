@@ -25,7 +25,7 @@ struct UserRegistrationView: View {
         ZStack(alignment: .bottom) {
             ScrollView {
                 VStack (alignment: .leading) {
-                    UserRegistrationText(type: "Username", holder: $userModel.username)
+                    UserRegistrationText(type: "Name", holder: $userModel.name)
                     Text("Gender")
                         .foregroundColor(.black)
                         .padding(.horizontal,20)
@@ -108,6 +108,7 @@ func UserRegistrationText(type: String, holder: Binding<String>) -> some View {
             .background(Color.white)
             .cornerRadius(20)
             .padding(10)
+            .textInputAutocapitalization(.none)
             .onChange(of: holder.wrappedValue) { _ in
                 isError = holder.wrappedValue.isEmpty
             }

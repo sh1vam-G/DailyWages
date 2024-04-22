@@ -17,18 +17,21 @@ class JobUpdateRepository {
     ) {
         let url = "http://localhost:3000/accept"
         var params: [String: String] = [:]
-        var finalId = String()
-        guard let id = UserProfileInformation.getUserDetails()?.id else {
+        guard let details = UserProfileInformation.getUserDetails() else {
             completion(.failure(.incorrectRequest))
             return
         }
-        params["clientId"] = id
+        params["clientId"] = details.id
         params["jobId"] = jobId
         params["status"] = status
+        var bodyParams: [String: String] = [:]
+        bodyParams["username"] = details.username
+        bodyParams["password"] = details.password
         service.updateJobService(
             url: url,
+            bodyParams: bodyParams,
             queryParams: params
-        ) { (result: Result<SuccessResponseType<String>, ErrorType>) in
+        ) { (result: Result<SuccessResponseType<Bool>, ErrorType>) in
             switch result {
             case .success(.successWithResponse(let resp)):
                 completion(.success(.successWithResponse(response: resp)))

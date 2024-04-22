@@ -63,9 +63,13 @@ class RegisterUsernameViewModel {
             guard let self = self else { return }
             switch result {
             case .success(.successWithResponse(let model)):
-                self.userRegisterationResponse = model
-                UserProfileInformation.saveUserDetails(user: UserLoginInfoModel(id: model.id, username: username, password: pass))
-                completion(.success(true))
+                if model.login {
+                    self.userRegisterationResponse = model
+                    UserProfileInformation.saveUserDetails(user: UserLoginInfoModel(id: String(model.id), username: username, password: pass))
+                    completion(.success(true))
+                } else {
+                    completion(.success(false))
+                }
             case .success(.successWithoutResponse):
                 completion(.success(false))
             case .failure(let error):

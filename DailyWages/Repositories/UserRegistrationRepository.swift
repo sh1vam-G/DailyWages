@@ -11,7 +11,7 @@ class UserRegistrationRepository {
     var userRegisterService = UserRegisterationService()
     
     func registerUser(
-        bodyParams: [String: String],
+        bodyParams: [String: Any],
         completion: @escaping userRegistrationResponse
     ) {
         let url = "http://localhost:3000/customer"

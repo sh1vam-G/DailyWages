@@ -105,6 +105,18 @@ struct UserAddressDomainModel {
         )
     }
     
+    static func createBodyParams(address: UserAddressDomainModel) -> [String: Any] {
+        var bodyParams: [String: Any] = [:]
+        bodyParams["latitude"] = address.latitude
+        bodyParams["longitude"] = address.longitude
+        bodyParams["houseNo"] = address.houseNo
+        bodyParams["apartment"] = address.apartment
+        bodyParams["city"] = address.city
+        bodyParams["state"] = address.state
+        bodyParams["pincode"] = address.pincode
+        return bodyParams
+    }
+    
     func getUserAddress() -> String {
         return (self.houseNo + ", " + self.apartment + ", " + self.city + ", " + self.state + ", " + self.pincode)
     }

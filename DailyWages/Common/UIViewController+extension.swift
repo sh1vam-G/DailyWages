@@ -50,8 +50,6 @@ extension UIViewController {
     func setTitle(title: String) {
         self.title = title
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-//        self.title = title
     }
     
     func setRightBarButtonItemToUserLogin() {
