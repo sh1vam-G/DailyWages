@@ -73,10 +73,12 @@ class JobDescriptionViewController: BaseViewController {
         }
     }
     
-    func navigateToJobDomainPage() {
+    func navigateToJobListingPage(msg: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.navigationController?.setViewControllers([JobDomainViewController.makeViewController()], animated: false)
+            let controller = JobListingViewController(jobListingViewModel: JobListingViewModel())
+            controller.setUpInformationView(msg: msg)
+            self.navigationController?.setViewControllers([controller], animated: false)
         }
     }
     
@@ -105,7 +107,9 @@ extension JobDescriptionViewController: JobAcceptanceDelegate {
             switch result {
             case .success(.successWithResponse(let valid)):
                 if valid {
-                    navigateBackToProfilePage()
+                    navigateToJobListingPage(msg: "job unassigned successfully")
+                } else {
+                    self.setUpInformationView(msg: "unable to unassign the job")
                 }
             case .success(.successWithoutResponse):
                 break
@@ -136,7 +140,11 @@ extension JobDescriptionViewController: JobAcceptanceDelegate {
             guard let self = self else { return }
             switch result {
             case .success(.successWithResponse(let valid)):
-                self.navigateToJobDomainPage()
+                if valid {
+                    self.navigateToJobListingPage(msg: "job assigned to you")
+                } else {
+                    self.setUpInformationView(msg: "unable to unassign the job")
+                }
             case .success(.successWithoutResponse):
                 self.configureErrorView(msg: "Not able to assign Job")
             case .failure(let error):

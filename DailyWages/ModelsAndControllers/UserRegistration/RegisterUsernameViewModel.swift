@@ -55,6 +55,8 @@ class RegisterUsernameViewModel {
         pass: String,
         completion: @escaping (Result<Bool,Error>) -> ()
     ) {
+        userData.username = username
+        userData.pass = pass
         let userModel = UserRegistrationRequestModel.createModel(using: userData)
         let bodyParams = userModel.covertIntoBodyParams()
         registrationRepo.registerUser(

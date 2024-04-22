@@ -46,7 +46,7 @@ struct JobDetailListingCellView: View {
                     .foregroundColor(.black)
                     .font(Font.custom("", size: 20))
                     .padding(.horizontal, 30)
-            }.padding(.top, -22)
+            }.padding(.top, -28)
             HStack {
                 Text("total amount:")
                     .foregroundColor(.black)
@@ -56,10 +56,11 @@ struct JobDetailListingCellView: View {
                     .foregroundColor(.black)
                     .font(Font.custom("", size: 20))
                     .padding(.horizontal, 30)
-            }.padding(.top, -15)
+            }
+            .padding(.top, -15)
             Spacer()
         }
-        .frame(width: UIScreen.main.bounds.width - 40, height: 140)
+        .frame(width: UIScreen.main.bounds.width - 40, height: 160)
         .background(Color.white)
         .cornerRadius(20)
     }

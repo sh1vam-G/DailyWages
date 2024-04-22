@@ -30,7 +30,7 @@
 		0C44A0062BD4410700338F47 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A0052BD4410700338F47 /* UserLoginViewController.swift */; };
 		0C44A0082BD4413C00338F47 /* JobDetailListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A0072BD4413C00338F47 /* JobDetailListingView.swift */; };
 		0C44A00A2BD448EF00338F47 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A0092BD448EF00338F47 /* SpinnerView.swift */; };
-		0C44A00C2BD44C7B00338F47 /* UIViewController+SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A00B2BD44C7B00338F47 /* UIViewController+SpinnerView.swift */; };
+		0C44A00C2BD44C7B00338F47 /* UIViewController+InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A00B2BD44C7B00338F47 /* UIViewController+InformationView.swift */; };
 		0C44A00E2BD4D5BE00338F47 /* JobDetailListingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A00D2BD4D5BE00338F47 /* JobDetailListingCellView.swift */; };
 		0C44A0102BD4D83D00338F47 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A00F2BD4D83D00338F47 /* UserLoginView.swift */; };
 		0C44A0132BD4DEDD00338F47 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A0122BD4DEDD00338F47 /* UserProfileViewController.swift */; };
@@ -62,6 +62,7 @@
 		0C44A04B2BD6171700338F47 /* UserRegistrationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A04A2BD6171700338F47 /* UserRegistrationResponseModel.swift */; };
 		0C44A04D2BD6194500338F47 /* UserRegistrationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A04C2BD6194500338F47 /* UserRegistrationRepository.swift */; };
 		0C44A04F2BD6974500338F47 /* UpdateJobResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A04E2BD6974500338F47 /* UpdateJobResponseModel.swift */; };
+		0C44A0512BD69A7400338F47 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C44A0502BD69A7400338F47 /* InformationView.swift */; };
 		0C6836312BD21EA1006CDF8D /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6836302BD21EA1006CDF8D /* UIColor+extension.swift */; };
 		0C6836332BD21FD6006CDF8D /* JobListingDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6836322BD21FD6006CDF8D /* JobListingDomainModel.swift */; };
 		0CD19C742BD29F52002DC065 /* JobDomainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD19C732BD29F52002DC065 /* JobDomainViewController.swift */; };
@@ -95,7 +96,7 @@
 		0C44A0052BD4410700338F47 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		0C44A0072BD4413C00338F47 /* JobDetailListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailListingView.swift; sourceTree = "<group>"; };
 		0C44A0092BD448EF00338F47 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
-		0C44A00B2BD44C7B00338F47 /* UIViewController+SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SpinnerView.swift"; sourceTree = "<group>"; };
+		0C44A00B2BD44C7B00338F47 /* UIViewController+InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+InformationView.swift"; sourceTree = "<group>"; };
 		0C44A00D2BD4D5BE00338F47 /* JobDetailListingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailListingCellView.swift; sourceTree = "<group>"; };
 		0C44A00F2BD4D83D00338F47 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
 		0C44A0122BD4DEDD00338F47 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		0C44A04A2BD6171700338F47 /* UserRegistrationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationResponseModel.swift; sourceTree = "<group>"; };
 		0C44A04C2BD6194500338F47 /* UserRegistrationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationRepository.swift; sourceTree = "<group>"; };
 		0C44A04E2BD6974500338F47 /* UpdateJobResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateJobResponseModel.swift; sourceTree = "<group>"; };
+		0C44A0502BD69A7400338F47 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		0C6836302BD21EA1006CDF8D /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		0C6836322BD21FD6006CDF8D /* JobListingDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListingDomainModel.swift; sourceTree = "<group>"; };
 		0CD19C732BD29F52002DC065 /* JobDomainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDomainViewController.swift; sourceTree = "<group>"; };
@@ -259,7 +261,7 @@
 				0C449FEE2BD2D94800338F47 /* BaseService.swift */,
 				0C449FFE2BD438EF00338F47 /* UIViewController+extension.swift */,
 				0C44A0092BD448EF00338F47 /* SpinnerView.swift */,
-				0C44A00B2BD44C7B00338F47 /* UIViewController+SpinnerView.swift */,
+				0C44A00B2BD44C7B00338F47 /* UIViewController+InformationView.swift */,
 				0C44A0142BD4E0E800338F47 /* UserProfileInformation.swift */,
 			);
 			path = Common;
@@ -278,6 +280,7 @@
 				0C44A02D2BD541E400338F47 /* RegisterUsernameView.swift */,
 				0C44A0312BD5498F00338F47 /* JobDescriptionView.swift */,
 				0C44A0332BD5501500338F47 /* UserProfileView.swift */,
+				0C44A0502BD69A7400338F47 /* InformationView.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -461,11 +464,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C44A0062BD4410700338F47 /* UserLoginViewController.swift in Sources */,
+				0C44A0512BD69A7400338F47 /* InformationView.swift in Sources */,
 				0C33EA3A2BD184550034D484 /* ViewController.swift in Sources */,
 				0C44A03F2BD609F600338F47 /* RegisterUsernameViewController.swift in Sources */,
 				0C44A0322BD5498F00338F47 /* JobDescriptionView.swift in Sources */,
 				0C44A00A2BD448EF00338F47 /* SpinnerView.swift in Sources */,
-				0C44A00C2BD44C7B00338F47 /* UIViewController+SpinnerView.swift in Sources */,
+				0C44A00C2BD44C7B00338F47 /* UIViewController+InformationView.swift in Sources */,
 				0C44A00E2BD4D5BE00338F47 /* JobDetailListingCellView.swift in Sources */,
 				0C449FF32BD384F000338F47 /* JobListDataModel.swift in Sources */,
 				0C44A0342BD5501500338F47 /* UserProfileView.swift in Sources */,
