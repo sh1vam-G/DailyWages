@@ -21,8 +21,10 @@ class UserLoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setTitle(title: "Login Required")
+        self.setUpDefaultNavigationController()
         if let user = UserProfileInformation.getUserDetails() {
-            self.navigateToUserProfileVC()
+            self.fetchUserDetails(username: user.username, password: user.password)
         } else {
             configureView()
         }
@@ -33,29 +35,31 @@ class UserLoginViewController: BaseViewController {
         username: String,
         password: String
     ) {
+        self.addSpinnerView()
         loginViewModel.fetchUserDetails(
             username: username,
             password: password
         ) { [weak self] result in
             guard let self = self else { return }
+            self.removeSpinnerView()
             switch result {
             case .success(let isValid):
                 if isValid {
                     self.navigateToUserProfileVC()
-                } else {
-                    break
                 }
             case .failure(let error):
+                UserProfileInformation.clearUserDetails()
                 switch error {
                 case .networkError:
-                    loginViewModel.updateViewWithMsg(msg: "network error try again later")
+                    self.configureErrorView(msg: "network error try again later")
                 case .serverError:
-                    loginViewModel.updateViewWithMsg(msg: "server error try again later")
+                    self.configureErrorView(msg: "server error try again later")
                 case .incorrectRequest:
-                    loginViewModel.updateViewWithMsg(msg: "incorrect username or password")
+                    self.configureErrorView(msg: "incorrect username or password")
                 case .unknownStatus:
-                    loginViewModel.updateViewWithMsg(msg: "some error fetching the details")
+                    self.configureErrorView(msg: "some error fetching the details")
                 }
+
             }
         }
     }
@@ -67,6 +71,7 @@ class UserLoginViewController: BaseViewController {
     
     func configureViewHierarchy() {
         self.view.addSubview(userLoginView)
+        self.setUpDefaultNavigationController()
     }
     
     func configureViewConstraints() {
@@ -79,17 +84,49 @@ class UserLoginViewController: BaseViewController {
     }
     
     func navigateToUserProfileVC() {
-        var viewControllers = navigationController?.viewControllers ?? []
-        viewControllers.removeLast()
-        viewControllers.append(UserProfileViewController())
-        self.navigationController?.setViewControllers(viewControllers, animated: false)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let viewModel = UserProfileViewModel(userData: loginViewModel.userData)
+            var viewControllers = navigationController?.viewControllers ?? []
+            viewControllers.removeLast()
+            viewControllers.append(UserProfileViewController(viewModel: viewModel))
+            self.navigationController?.setViewControllers(viewControllers, animated: false)
+        }
     }
     
     func navigateToUserRegistrationVC() {
-        var viewControllers = navigationController?.viewControllers ?? []
-        viewControllers.removeLast()
-        viewControllers.append(UserRegistrationController())
-        self.navigationController?.setViewControllers(viewControllers, animated: false)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            var viewControllers = navigationController?.viewControllers ?? []
+            viewControllers.removeLast()
+            viewControllers.append(UserRegistrationController())
+            self.navigationController?.setViewControllers(viewControllers, animated: false)
+        }
+    }
+    
+    
+    func configureErrorView(msg: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let errorMsgView: UIView = {
+                let controller = UIHostingController(rootView: ErrorView(errorMsg: msg))
+                let view = controller.view ?? UIView()
+                view.translatesAutoresizingMaskIntoConstraints = false
+                return view
+            }()
+            
+//            self.listingView.removeFromSuperview()
+            self.view.addSubview(errorMsgView)
+            self.view.backgroundColor = UIColor(hex: "#eeeeee")
+            self.setTitle(title: "OOPS!!!")
+            
+            NSLayoutConstraint.activate([
+                errorMsgView.topAnchor.constraint(equalTo: self.view.topAnchor),
+                errorMsgView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+                errorMsgView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+                errorMsgView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+            ])
+        }
     }
 }
 
@@ -99,6 +136,6 @@ extension UserLoginViewController: LoginButtonDelegate {
     }
     
     func loginButtonTapped(username: String, password: String) {
-        self.navigateToUserProfileVC()
+        self.fetchUserDetails(username: username, password: password)
     }
 }

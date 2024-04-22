@@ -8,10 +8,9 @@
 import Foundation
 
 class UserProfileViewModel {
-    private var repository = UserLoginRepository()
+    var userProfileData: UserLoginDomainModel = UserLoginDomainModel()
     
-    func fetchUserDetails(username: String, password: String) {
-//        repository.fetchUserData(username: username, password: password, completion: <#T##userLoginRepostoryResponse##userLoginRepostoryResponse##(Result<SuccessResponseType<UserLoginDomainModel>, ErrorType>) -> ()#>)
-        
+    init(userData: UserLoginDomainModel) {
+        userProfileData = userData
     }
 }

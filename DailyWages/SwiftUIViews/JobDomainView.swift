@@ -23,11 +23,13 @@ struct JobDomainView: View {
             Spacer()
                 .frame(height: 10)
             Text("SEARCHING FOR?")
+                .foregroundColor(.black)
                 .font(Font.custom("", size: 30))
                 .frame(width: UIScreen.main.bounds.width-80, height: 200)
                 
                 VStack {
                     Text("JOB OUTSIDE")
+                        .foregroundColor(.black)
                         .font(Font.custom("", size: 30))
                         .fontWeight(.bold)
                         .frame(width: UIScreen.main.bounds.width-40 ,height: 150)
@@ -41,6 +43,7 @@ struct JobDomainView: View {
                     Spacer()
                         .frame(height: 40)
                     Text("JOB AT HOME").font(Font.custom("", size: 30))
+                        .foregroundColor(.black)
                         .frame(width: UIScreen.main.bounds.width-40 ,height: 150)
                         .background(Color.white)
                         .cornerRadius(20)

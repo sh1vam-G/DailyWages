@@ -11,7 +11,9 @@ import SwiftUI
 class UserLoginViewModel {
     var isUserLoggedIn: Bool = false
     private var repository = UserLoginRepository()
+    var userData = UserLoginDomainModel()
     @Published var errorMsg: String = String()
+    
     
     func fetchUserDetails(
         username: String,
@@ -24,6 +26,8 @@ class UserLoginViewModel {
         ) { (result: Result<SuccessResponseType,ErrorType>) in
             switch result {
             case .success(.successWithResponse(let response)):
+                self.userData = response
+                UserProfileInformation.saveUserDetails(user: UserLoginInfoModel(id: String(response.id), username: username, password: password))
                 completion(.success(true))
             case .success(.successWithoutResponse):
                 completion(.success(false))

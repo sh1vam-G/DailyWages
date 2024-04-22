@@ -8,7 +8,7 @@
 import Foundation
 
 class JobListDataModel: Codable {
-    let id: String?
+    let id: Int?
     let code: String?
     let type: String?
     let numberOfPieces: Int?
@@ -23,7 +23,7 @@ class JobListDataModel: Codable {
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = try container.decodeIfPresent(String.self, forKey: .id)
+        self.id = try container.decodeIfPresent(Int.self, forKey: .id)
         self.code = try container.decodeIfPresent(String.self, forKey: .code)
         self.type = try container.decodeIfPresent(String.self, forKey: .type)
         self.numberOfPieces = try container.decodeIfPresent(Int.self, forKey: .numberOfPieces)

@@ -8,38 +8,58 @@
 import SwiftUI
 
 protocol userProfileProtocol: AnyObject {
-    func jobSelected()
+    func jobSelected(job: JobListDomainModel)
     func logoutButtonTapped()
 }
 
 struct UserProfileView: View {
     
     weak var delegate: userProfileProtocol?
+    private var userData: UserLoginDomainModel = UserLoginDomainModel()
+    
+    init(
+        userData: UserLoginDomainModel,
+        delegate: userProfileProtocol?
+    ) {
+        self.userData = userData
+        self.delegate = delegate
+    }
     
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("Hi Shivam !!!")
+                    Text("Hi " + userData.name + "!!!")
                         .font(Font.custom("", size: 30))
                         .padding(20)
-                    userDescriptionView(type: "email: ", value: "shivam2671997@gmail.com")
-                    userDescriptionView(type: "phone number: ", value: "9813179017")
-                    userDescriptionView(type: "address: ", value: "106, pulikeshi apartment, Bengaluru, Karnataka")
+                    userDescriptionView(type: "email: ", value: userData.email)
+                    userDescriptionView(type: "phone number: ", value: userData.phoneNumber)
+                    userDescriptionView(type: "address: ", value: userData.address.getUserAddress())
                     
                     Text("Pending jobs: ")
                         .padding(20)
-                    JobDetailListingCellView(job: JobListDomainModel())
-                        .padding(10)
+                    ForEach(userData.getInProgressJobs(), id: \.self) { job in
+                        JobDetailListingCellView(job: job)
+                            .padding(10)
+                            .onTapGesture {
+                                delegate?.jobSelected(job: job)
+                            }
+                    }
                     
                     Text("Jobs done by you: ")
                         .padding(20)
                     
-                    JobDetailListingCellView(job: JobListDomainModel())
-                        .padding(10)
+                    ForEach(userData.getCompletedJobs(), id: \.self) { job in
+                        JobDetailListingCellView(job: job)
+                            .padding(10)
+                            .onTapGesture {
+                                delegate?.jobSelected(job: job)
+                            }
+                    }
                 }
                 
             }
+            .frame(maxWidth: .infinity)
             .background(Color(uiColor: UIColor(hex: "#eeeeee")))
             .cornerRadius(20)
             .padding(20)
@@ -47,7 +67,7 @@ struct UserProfileView: View {
             
             HStack {
                 Button("Logout") {
-
+                    delegate?.logoutButtonTapped()
                 }
                 .frame(width: 80)
                 .padding(20)
@@ -77,12 +97,6 @@ func userDescriptionView(type: String, value: String) -> some View {
     }
 }
 
-func workingJobsCard() -> some View {
-    return VStack {
-        //        HStack
-    }
-}
-
 #Preview {
-    UserProfileView()
+    UserProfileView(userData: UserLoginDomainModel(), delegate: nil)
 }

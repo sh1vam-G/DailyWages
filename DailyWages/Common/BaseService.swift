@@ -61,12 +61,15 @@ class BaseService {
             if let httpResponse = response as? HTTPURLResponse{
                 if (400...499).contains(httpResponse.statusCode) {
                     completion(.failure(.incorrectRequest))
+                    print(data)
                 } else if (500...599).contains(httpResponse.statusCode) {
                     completion(.failure(.serverError))
+                    print(data)
                 }
                 
                 guard (200...299).contains(httpResponse.statusCode) else {
                     completion(.failure(.unknownStatus))
+                    print(data)
                     return
                 }
             }

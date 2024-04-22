@@ -8,22 +8,26 @@
 import SwiftUI
 
 protocol UserRegistrationProtocol: AnyObject {
-    func doneButtonTapped()
+    func doneButtonTapped(userData: UserRegistrationModel)
     func cancelButtonTapped()
 }
 
 struct UserRegistrationView: View {
-    @ObservedObject var userModel: UserRegistraionModel = UserRegistraionModel()
+    @ObservedObject var userModel: UserRegistrationModel = UserRegistrationModel()
     var genderTypes: [String] = ["Male","Female","Others"]
     var date: Date = Date()
     weak var delegate: UserRegistrationProtocol?
     
+    init(delegate: UserRegistrationProtocol?) {
+        self.delegate = delegate
+    }
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView {
                 VStack (alignment: .leading) {
-                    UserRegistrationText(type: "Username", holder: $userModel.username)
+                    UserRegistrationText(type: "Name", holder: $userModel.name)
                     Text("Gender")
+                        .foregroundColor(.black)
                         .padding(.horizontal,20)
                         .padding(.top, 10)
                     HStack {
@@ -52,7 +56,7 @@ struct UserRegistrationView: View {
                     UserRegistrationText(type: "House No./Plot", holder: $userModel.houseNo)
                     UserRegistrationText(type: "Apartment/Colony", holder: $userModel.apartment)
                     UserRegistrationText(type: "City", holder: $userModel.city)
-                    UserRegistrationText(type: "State", holder: $userModel.pincode)
+                    UserRegistrationText(type: "State", holder: $userModel.state)
                     UserRegistrationText(type: "Pincode", holder: $userModel.pincode)
                 }
             }
@@ -62,7 +66,7 @@ struct UserRegistrationView: View {
             .padding(.bottom, 120)
             HStack {
                 Button("DONE") {
-                    delegate?.doneButtonTapped()
+                    delegate?.doneButtonTapped(userData: userModel)
                 }
                 .frame(width: 80)
                 .padding(20)
@@ -85,26 +89,34 @@ struct UserRegistrationView: View {
             .frame(maxWidth: .infinity)
             .background(Color(uiColor: UIColor(hex: "#eeeeee")))
         }
+        .background(Color.white)
     }
 }
 
 func UserRegistrationText(type: String, holder: Binding<String>) -> some View {
+    @State var isError: Bool = false
     return VStack (alignment: .leading) {
         Text(type)
             .padding(.top, 20)
             .padding(.horizontal, 20)
             .padding(.bottom, -10)
+            .foregroundColor(isError ? .red : .black)
         TextField(type, text: holder)
+            .foregroundColor(.black)
             .frame(height: 20)
             .padding(20)
             .background(Color.white)
             .cornerRadius(20)
             .padding(10)
+            .textInputAutocapitalization(.none)
+            .onChange(of: holder.wrappedValue) { _ in
+                isError = holder.wrappedValue.isEmpty
+            }
     }
 }
 
 
 
 #Preview {
-    UserRegistrationView()
+    UserRegistrationView(delegate: nil)
 }

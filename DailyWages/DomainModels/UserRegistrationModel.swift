@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserRegistraionModel: ObservableObject {
+class UserRegistrationModel: ObservableObject {
     @Published var name: String
     @Published var gender: String
     @Published var email: String

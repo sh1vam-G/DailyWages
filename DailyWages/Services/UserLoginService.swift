@@ -14,7 +14,7 @@ class UserLoginService: BaseService {
         bodyParams: [String: Any],
         completion: @escaping userLoginResponse
     ) {
-        let urlString = "http://localhost:3000/customer"
+        let urlString = "http://localhost:3000/client"
         var headers: [String: String] = [:]
         headers["Content-Type"] = "application/json"
         executeRequest(
@@ -22,7 +22,7 @@ class UserLoginService: BaseService {
             queryParams: [:],
             bodyParams: bodyParams,
             headers: headers,
-            type: .get
+            type: .post
         ) { (result: Result<UserLoginResponseModel?, ErrorType>) in
             switch result {
             case .success(let data):
